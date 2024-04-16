@@ -11,6 +11,9 @@ import { Button } from "@/components/ui/button"
 
 export default function register() {
   return (
+    <div className="loginpg">
+     <div className="loginborder"> 
+     
     <Card className="mx-auto max-w-sm">
       <CardHeader className="space-y-1">
         <CardTitle className="text-2xl font-bold black">Register</CardTitle>
@@ -18,24 +21,26 @@ export default function register() {
       </CardHeader>
       <CardContent>
         <div className="space-y-2">
-          <Label htmlFor="username">Username</Label>
+          <Label htmlFor="username" style={{color:"black" }}>Username</Label>
           <Input id="username" placeholder="john_doe" required />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="wallet">Wallet</Label>
+          <Label htmlFor="wallet" style={{color:"black" }}>Wallet</Label>
           <Input id="wallet" placeholder="0x0000000000000000" required />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="emailid">Email</Label>
-          <Input id="emailid" placeholder="example@example.com" required type="email" />
+          <Label htmlFor="emailid" style={{color:"black" }}>Email</Label>
+          <Input id="emailid" placeholder="example@example.com" style={{color:"black" }} required type="email" />
         </div>
         <div className="space-y-2">
           <Label htmlFor="position" className="black">Position in Court</Label>
-          <Input id="position" style={{marginBottom:"20px" }} placeholder="Judge" required />
+          <Input id="position" style={{marginBottom:"20px",color:"black" }} placeholder="Judge" required />
         </div>
         <Button className="w-full" style={{marginTop:"20px" ,color:"white",backgroundColor:"black"}}>Register</Button>
       </CardContent>
     </Card>
+    </div>
+    </div>
   )
 }
 

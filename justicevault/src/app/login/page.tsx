@@ -21,11 +21,11 @@ export default function login() {
       </CardHeader>
       <CardContent>
         <div className="space-y-2 ">
-          <Label htmlFor="username">Username</Label>
+          <Label htmlFor="username" style={{color:"black" }}>Username</Label>
           <Input id="username" placeholder="john_doe" required />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="wallet">Wallet</Label>
+          <Label htmlFor="wallet" style={{color:"black" }}>Wallet</Label>
           <Input id="wallet" placeholder="0x0000000000000000" required />
         </div>
         <div className="space-y-2">
