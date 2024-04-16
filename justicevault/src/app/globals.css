@@ -14,6 +14,19 @@
   font-family: "Sofia-Pro-Bold";
   src: url("/fonts/SofiaProBold.ttf");
 }
+.loginpg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.loginborder{
+  border: 3px solid black ;
+  border-radius: 10px;
+}
+.black{
+  color: #000;
+}
 html,
 body,
 .root {
