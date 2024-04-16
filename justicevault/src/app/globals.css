@@ -1,0 +1,296 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Sofia-Pro";
+  src: url("/fonts/SofiaProLight.ttf");
+}
+@font-face {
+  font-family: "Sofia-Pro-Regular";
+  src: url("/fonts/SofiaProRegular.ttf");
+}
+
+@font-face {
+  font-family: "Sofia-Pro-Bold";
+  src: url("/fonts/SofiaProBold.ttf");
+}
+html,
+body,
+.root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+* {
+  font-family: "Sofia-Pro";
+}
+.logo {
+  font-family: "Sofia-Pro-Bold";
+}
+
+nav {
+  width: 100%;
+  height: 86px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+nav div {
+  display: flex;
+  align-items: center;
+}
+nav div p,
+nav div h2 {
+  display: inline;
+  height: 100%;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+a {
+}
+nav div button {
+  margin-right: 20px;
+}
+.header {
+  /* position: absolute; */
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+  flex-direction: column;
+  min-height: 500px;
+  width: 100%;
+}
+.header h2 {
+  text-align: center;
+  font-size: 56px;
+  font-family: "Sofia-Pro-Bold";
+}
+.web3 {
+  color: #651fff;
+}
+.header p {
+  text-align: center;
+  color: #5c5f6e;
+  font-size: 20px;
+  margin: 20px 0 20px 0;
+}
+.header div {
+  border: 1;
+  border-radius: 6%;
+  color: white;
+  padding: 12px 44px;
+  font-family: Sofia-Pro-Regular;
+  background-color: #651fff;
+  text-decoration: none;
+}
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+}
+.features h2 {
+  text-align: center;
+  font-family: "Sofia-Pro-Bold";
+  font-size: 50px;
+}
+.features p {
+  text-align: center;
+  color: #5c5f6e;
+  font-size: 20px;
+  margin: 20px 0 20px 0;
+}
+
+.cards {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+}
+.cards .card {
+  width: 400px;
+  height: 495px;
+  color: #fff;
+  background-color: #651fff;
+  padding: 30px 30px 30px 30px;
+  margin: 5px 5px 5px 5px;
+}
+.cards .card img {
+  margin: 10px 10px 10px 10px;
+}
+.cards .card h2 {
+  font-size: 43px;
+  text-align: left;
+}
+.cards .card p {
+  color: white;
+  text-align: left;
+  font-size: 20px;
+}
+
+.footer {
+  padding: 50px 15% 10px;
+
+  background-color: #1a284e;
+}
+.footer h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+  color:#fff ;
+}
+.footer .row {
+  align-items: flex-start;
+  padding: 10px 0;
+}
+.footer .col {
+  flex-basis: 25%;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+.footer .col a {
+  display: block;
+  text-decoration: none;
+  color: #777;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.footer .drop-btn {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 7px 20px;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.copyright-txt {
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #777;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.search input {
+  height: 62px;
+  flex-basis: 50%;
+  margin: 0 40px 0 40px;
+  font-size: 22px;
+  background-color: #d9d9d9;
+  color: #606060;
+  border: 1px solid #606060;
+  box-shadow: rgb(114, 114, 114) 0px 0px 1px 1px inset;
+  padding-left: 15px;
+}
+form {
+  width: 100%;
+  height: 80vh;
+}
+form .subbox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .addbox {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+form .submit {
+  border-radius: 6%;
+  color: #fff;
+  padding: 12px 44px;
+  font-family: Sofia-Pro-Regular;
+  background-color: #651fff;
+  margin: 40px 0 40px 0;
+}
+form .addbox .addbox{
+  font-family: Sofia-Pro-Regular;
+  padding-left: 25px;
+}
+
+/* 
+ .navbar{
+  
+ }
+ .navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+ }
+ .navbar ul li a{
+  text-decoration: none;
+ } */
+@media (max-width: 600px) {
+  nav div p,
+  br {
+    display: none;
+  }
+  .cards .card {
+    flex-basis: 100%;
+    width: 340px;
+    height: 380px;
+    text-align: center;
+  }
+  .cards .card h2 {
+    font-size: 35px;
+    text-align: center;
+  }
+  .cards .card p {
+    text-align: center;
+  }
+  .cards .card img {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    width: 41px;
+  }
+  .cards {
+    width: 100%;
+    height: 1325px;
+    display: block;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header div {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 32px;
+  }
+  .search {
+    display: block;
+    gap: 20px;
+    align-items: center;
+    margin-top: 50px;
+    min-height: 100vh;
+  }
+  .search input {
+    height: 62px;
+    margin: 20px 20px 0 20px;
+    font-size: 18px;
+    width: 90%;
+  }
+}
