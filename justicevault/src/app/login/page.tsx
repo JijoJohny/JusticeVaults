@@ -29,7 +29,7 @@ export default function login() {
           <Input id="wallet" placeholder="0x0000000000000000" required />
         </div>
         <div className="space-y-2">
-        <Button className="w-full " style={{marginTop:"10px" ,color:"white",backgroundColor:"black"}}>Login</Button>
+        <Button className="w-full " style={{marginTop:"10px" ,color:"white",backgroundColor:"#651fff"}}>Login</Button>
 
         <CardDescription style={{textAlign:"center"}}>Don't Have an account?<a href="/register">register</a></CardDescription>
         </div>

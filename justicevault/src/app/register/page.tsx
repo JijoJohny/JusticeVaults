@@ -36,7 +36,7 @@ export default function register() {
           <Label htmlFor="position" className="black">Position in Court</Label>
           <Input id="position"  style={{marginBottom:"20px",color:"black" }} placeholder="Judge" required />
         </div>
-        <Button  className="w-full" style={{marginBottom:"20px",marginTop:"20px" ,color:"white",backgroundColor:"black"}}>Register</Button>
+        <Button  className="w-full" style={{marginBottom:"20px",marginTop:"20px" ,color:"white",backgroundColor:"#651fff"}}>Register</Button>
         <CardDescription style={{textAlign:"center"}}>Already Have an account?<a href="/login">Login</a></CardDescription>
       </CardContent>
 
