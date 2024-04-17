@@ -30,6 +30,8 @@ export default function login() {
         </div>
         <div className="space-y-2">
         <Button className="w-full " style={{marginTop:"10px" ,color:"white",backgroundColor:"black"}}>Login</Button>
+
+        <CardDescription style={{textAlign:"center"}}>Don't Have an account?<a href="/register">register</a></CardDescription>
         </div>
       </CardContent>
     </Card>
