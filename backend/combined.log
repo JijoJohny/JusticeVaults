@@ -1,0 +1,89 @@
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-16T13:06:31.569Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-16T13:06:31.576Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-16T13:06:41.086Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-16T13:06:41.091Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-16T13:06:50.104Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-16T13:06:50.111Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-16T13:07:12.791Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-16T13:07:12.795Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T00:40:02.986Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T00:40:02.991Z"}
+{"level":"info","message":"Login successful for user jjdhsdjhjjjdshddddd","timestamp":"2024-04-19T00:41:23.871Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T00:46:00.759Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T00:46:00.763Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T00:48:20.156Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T00:48:20.161Z"}
+{"code":"LIMIT_UNEXPECTED_FILE","field":"files","level":"error","message":"Internal server error: Unexpected field","name":"MulterError","stack":"MulterError: Unexpected field\n    at wrappedFileFilter (C:\\Users\\Anjana Kj\\PycharmProjects\\justicevault3\\backend\\node_modules\\multer\\index.js:40:19)\n    at Multipart.<anonymous> (C:\\Users\\Anjana Kj\\PycharmProjects\\justicevault3\\backend\\node_modules\\multer\\lib\\make-middleware.js:107:7)\n    at Multipart.emit (node:events:517:28)\n    at Multipart.emit (node:domain:489:12)\n    at HeaderParser.cb (C:\\Users\\Anjana Kj\\PycharmProjects\\justicevault3\\backend\\node_modules\\busboy\\lib\\types\\multipart.js:358:14)\n    at HeaderParser.push (C:\\Users\\Anjana Kj\\PycharmProjects\\justicevault3\\backend\\node_modules\\busboy\\lib\\types\\multipart.js:162:20)\n    at SBMH.ssCb [as _cb] (C:\\Users\\Anjana Kj\\PycharmProjects\\justicevault3\\backend\\node_modules\\busboy\\lib\\types\\multipart.js:394:37)\n    at feed (C:\\Users\\Anjana Kj\\PycharmProjects\\justicevault3\\backend\\node_modules\\streamsearch\\lib\\sbmh.js:248:10)\n    at SBMH.push (C:\\Users\\Anjana Kj\\PycharmProjects\\justicevault3\\backend\\node_modules\\streamsearch\\lib\\sbmh.js:104:16)\n    at Multipart._write (C:\\Users\\Anjana Kj\\PycharmProjects\\justicevault3\\backend\\node_modules\\busboy\\lib\\types\\multipart.js:567:19)","storageErrors":[],"timestamp":"2024-04-19T00:48:24.663Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T00:50:22.581Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T00:50:22.587Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T00:51:31.011Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T00:51:31.018Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T00:52:45.222Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T00:52:45.229Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T00:53:48.706Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T00:53:48.710Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T00:54:17.059Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T00:54:17.065Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T12:53:40.597Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T12:53:40.601Z"}
+{"level":"info","message":"Login successful for user jjdhsdjhjjjdshddddd","timestamp":"2024-04-19T12:55:17.820Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T12:58:47.502Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T12:58:47.509Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:01:04.605Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:01:04.611Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:01:29.319Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:01:29.325Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:01:54.266Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:01:54.271Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:06:16.393Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:06:16.398Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:09:06.147Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:09:06.152Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:09:56.694Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:09:56.699Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:10:58.697Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:10:58.704Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:11:52.336Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:11:52.340Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:14:27.323Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:14:27.329Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:16:02.425Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:16:02.434Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:16:26.191Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:16:26.197Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:36:02.729Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:36:02.736Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:37:16.802Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:37:16.806Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:38:24.902Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:38:24.912Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:39:28.137Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:39:28.142Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:39:47.705Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:39:47.711Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:40:31.527Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:40:31.532Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:40:44.535Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:40:44.540Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:49:15.229Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:49:15.234Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:49:45.146Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:49:45.157Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:55:50.000Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:55:50.005Z"}
+{"level":"info","message":"Login successful for user jjdhsdjhjjjdshddddd","timestamp":"2024-04-19T13:56:55.954Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T13:59:19.832Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T13:59:19.838Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T16:11:56.699Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T16:11:56.704Z"}
+{"level":"info","message":"Login successful for user jjdhsdjhjjjdshddddd","timestamp":"2024-04-19T16:12:55.868Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T16:20:17.133Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T16:20:17.139Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T16:21:33.236Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T16:21:33.242Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T16:22:22.348Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T16:22:22.354Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T16:24:01.333Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T16:24:01.338Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-19T16:24:18.668Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-19T16:24:18.673Z"}
