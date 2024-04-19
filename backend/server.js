@@ -2,11 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoutes');
-//const uploadRoutes = require('./routes/uploadRoutes')
+const uploadRoutes = require('./routes/uploadRoutes')
 const helmet = require('helmet');
 const logger = require('./middlewares/logger');
 const multer = require('multer');
-// const { uploadFileToStorj } = require('./controllers/uploadController'); 
 
 const app = express();
 app.use(helmet());
@@ -60,24 +59,8 @@ app.get('/', (req, res) => {
 });
 
 app.use('/auth', authRoutes);
-//app.use('/file',uploadRoutes)
+app.use('/file',uploadRoutes)
 
-// app.post('/upload', async (req, res) => {
-//   try {
-//     const { bucketName, fileName, fileContent } = req.body;
-
-//     // Convert file content to Buffer
-//     const file = Buffer.from(fileContent, 'utf-8');
-
-//     // Upload file to Storj
-//     const fileUrl = await uploadFileToStorj(bucketName, fileName, file);
-
-//     res.status(200).json({ message: 'File uploaded successfully', fileUrl });
-//   } catch (error) {
-//     console.error('Error uploading file:', error);
-//     res.status(500).json({ error: 'Internal server error' });
-//   }
-// });
 
 app.use((err, req, res, next) => {
   logger.error('Internal server error:', err);
