@@ -1,4 +1,5 @@
 const Case = require('../models/case'); 
+const logger = require('../middlewares/logger');
 
 async function addCase(req, res) {
     try {
