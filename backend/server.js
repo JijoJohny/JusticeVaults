@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoutes');
 const uploadRoutes = require('./routes/uploadRoutes')
+const caseRoutes = require('./routes/caseRoutes')
 const helmet = require('helmet');
 const logger = require('./middlewares/logger');
 const multer = require('multer');
@@ -60,7 +61,7 @@ app.get('/', (req, res) => {
 
 app.use('/auth', authRoutes);
 app.use('/file',uploadRoutes)
-
+app.use('/case',caseRoutes)
 
 app.use((err, req, res, next) => {
   logger.error('Internal server error:', err);
