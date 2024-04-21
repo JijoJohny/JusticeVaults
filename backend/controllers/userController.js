@@ -16,13 +16,13 @@ async function registerUser(req, res) {
         return res.status(400).json({ error: 'Username is required' });
       }
       if (!positionInCourt) {
-        return res.status(400).json({ error: 'Positonincourt is  required' });
+        return res.status(400).json({ error: 'Position in court is  required' });
       }
       if (!email) {
         return res.status(400).json({ error: 'Email is required' });
       }
       if (!walletAddress) {
-        return res.status(400).json({ error: "Walletaddress is required" });
+        return res.status(400).json({ error: "Wallet address is required" });
       }
 
       const existingUser = await User.findOne({ username });
