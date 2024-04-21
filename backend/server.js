@@ -38,7 +38,7 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/court', {
+mongoose.connect('mongodb://127.0.0.1:27017/', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
