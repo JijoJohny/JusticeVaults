@@ -188,3 +188,70 @@
 {"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T05:55:46.039Z"}
 {"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T05:55:51.149Z"}
 {"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T05:55:51.155Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T06:58:04.086Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T06:58:04.091Z"}
+{"level":"info","message":"Login successful for user jjdhsdjhjjjdshddddd","timestamp":"2024-04-21T06:58:41.300Z"}
+{"level":"info","message":"File uploaded successfully by (Username: jjdhsdjhjjjdshddddd)","timestamp":"2024-04-21T06:59:18.257Z"}
+{"code":"NoSuchKey","level":"error","message":"Error retrieving file: The specified key does not exist.","region":null,"requestId":"17C839A09D6E97D3","retryDelay":2.0034567816331617,"retryable":false,"stack":"NoSuchKey: The specified key does not exist.\n    at Request.extractError (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\services\\s3.js:712:35)\n    at Request.callListeners (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\sequential_executor.js:106:20)\n    at Request.emit (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\sequential_executor.js:78:10)\n    at Request.emit (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\request.js:686:14)\n    at Request.transition (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\request.js:22:10)\n    at AcceptorStateMachine.runTo (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\state_machine.js:14:12)\n    at C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\state_machine.js:26:10\n    at Request.<anonymous> (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\request.js:38:9)\n    at Request.<anonymous> (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\request.js:688:12)\n    at Request.callListeners (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\sequential_executor.js:116:18)","statusCode":404,"time":"2024-04-21T07:03:40.986Z","timestamp":"2024-04-21T07:03:40.989Z"}
+{"code":"NoSuchKey","level":"error","message":"Error retrieving file: The specified key does not exist.","region":null,"requestId":"17C839D661ECED06","retryDelay":72.0631575110954,"retryable":false,"stack":"NoSuchKey: The specified key does not exist.\n    at Request.extractError (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\services\\s3.js:712:35)\n    at Request.callListeners (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\sequential_executor.js:106:20)\n    at Request.emit (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\sequential_executor.js:78:10)\n    at Request.emit (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\request.js:686:14)\n    at Request.transition (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\request.js:22:10)\n    at AcceptorStateMachine.runTo (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\state_machine.js:14:12)\n    at C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\state_machine.js:26:10\n    at Request.<anonymous> (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\request.js:38:9)\n    at Request.<anonymous> (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\request.js:688:12)\n    at Request.callListeners (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\aws-sdk\\lib\\sequential_executor.js:116:18)","statusCode":404,"time":"2024-04-21T07:07:31.891Z","timestamp":"2024-04-21T07:07:31.892Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:08:05.968Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:08:05.974Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:08:44.706Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:08:44.721Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:11:29.496Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:11:29.501Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:11:55.728Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:11:55.738Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:15:20.043Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:15:20.051Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:15:24.314Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:15:24.319Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:15:30.312Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:15:30.323Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:15:36.380Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:15:36.391Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:15:48.624Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:15:48.629Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:15:56.420Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:15:56.424Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:16:02.575Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:16:02.587Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:16:11.926Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:16:11.932Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:16:17.585Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:16:17.596Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:16:19.256Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:16:19.263Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:16:21.097Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:16:21.106Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:16:27.207Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:16:27.216Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:16:32.443Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:16:32.450Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:16:34.249Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:16:34.254Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:16:36.220Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:16:36.226Z"}
+{"level":"error","message":"File with key 00437f5055b80de1f72a802ca45ba4d0b10d3f6eaaeba25d43e628558c942763 not found","timestamp":"2024-04-21T07:16:41.462Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:17:24.205Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:17:24.212Z"}
+{"level":"error","message":"File with key 00437f5055b80de1f72a802ca45ba4d0b10d3f6eaaeba25d43e628558c942763 not found","timestamp":"2024-04-21T07:17:27.760Z"}
+{"level":"error","message":"File with key 00437f5055b80de1f72a802ca45ba4d0b10d3f6eaaeba25d43e628558c942763 not found","timestamp":"2024-04-21T07:17:33.588Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:17:54.142Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:17:54.158Z"}
+{"level":"error","message":"File with key 00437f5055b80de1f72a802ca45ba4d0b10d3f6eaaeba25d43e628558c942763 not found","timestamp":"2024-04-21T07:17:57.151Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:18:52.145Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:18:52.158Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:18:57.905Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:18:57.913Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:19:38.633Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:19:38.645Z"}
+{"level":"error","message":"File with key 00437f5055b80de1f72a802ca45ba4d0b10d3f6eaaeba25d43e628558c942763 not found","timestamp":"2024-04-21T07:21:03.533Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:21:29.908Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:21:29.916Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:21:48.514Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:21:48.520Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:22:08.052Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:22:08.059Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T07:23:56.961Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T07:23:56.970Z"}

@@ -27,28 +27,31 @@ async function getFileFromStorj(req, res) {
             logger.error(`File details for ${fileName} not found in database`);
             return res.status(404).json({ error: 'File details not found in database' });
         }
-
         const params = {
             Bucket: "justicevault",
-            Key: fileName
+            Key: fileDetails.fileId
         };
 
-        const fileData = await s3.getObject(params).promise();
+        try {
+            const fileData = await s3.getObject(params).promise();
 
-        if (!fileData || !fileData.Body) {
-            logger.error(`File ${fileName} not found`);
-            return res.status(404).json({ error: 'File not found' });
-        }
+            res.setHeader('Content-disposition', `attachment; filename=${fileName}`);
+            res.setHeader('Content-type', fileData.ContentType);
 
-        res.setHeader('Content-disposition', `attachment; filename=${fileName}`);
-        res.setHeader('Content-type', fileData.ContentType);
-
-        // res.json({
+            // res.json({
         //     fileName,
         //     description: fileDetails ? fileDetails.description : 'Description not available',
         //     fileContent: fileData.Body.toString('base64') // Convert file data to base64 string
         // });
-        res.send(fileData.Body);
+
+            res.send(fileData.Body);
+        } catch (error) {
+            if (error.code === 'NoSuchKey') {
+                logger.error(`File with key not found`);
+                return res.status(404).json({ error: 'File not found' });
+            }
+            throw error; 
+        }
     } catch (error) {
         logger.error("Error retrieving file:", error);
         console.error("Error retrieving file:", error);

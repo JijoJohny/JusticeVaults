@@ -1,6 +1,7 @@
 const S3 = require("aws-sdk/clients/s3");
 const File = require("../models/files");
 const logger = require('../middlewares/logger');
+const crypto = require('crypto');
 require('dotenv').config();
 
 const accessKeyId = process.env.ACCESS_KEY_ID;
@@ -38,9 +39,13 @@ async function uploadFileToStorj(req, res) {
             return res.status(400).json({ error: 'File with this filename already exists' });
         }
 
+        const hash = crypto.createHash('sha256');
+        hash.update(fileBuffer);
+        const fileId = hash.digest('hex');
+
         const params = {
             Bucket: "justicevault",
-            Key: fileName,
+            Key: fileId,
             Body: fileBuffer,
             ContentType: file.mimetype
         };
@@ -52,7 +57,7 @@ async function uploadFileToStorj(req, res) {
         console.log("File uploaded successfully:", uploadResponse.Location);
 
         const fileData = new File({
-            fileId: uploadResponse.Key,
+            fileId,
             username: user.username,
             fileName,
             description,
