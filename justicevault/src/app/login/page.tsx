@@ -9,13 +9,13 @@ import axios from "axios"
 
 export default function login() {
   const [username, setUsername] = useState('');
-  const [wallet, setWallet] = useState('');
+  const [walletAddress, setWallet] = useState('');
   const [error, setError] = useState('');
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/login', {
-        username, wallet
+      const response = await axios.post('/auth/login', {
+        username, walletAddress
       });
       // Assuming your backend returns a token upon successful login
       const token = response.data.token;
@@ -46,11 +46,11 @@ export default function login() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="wallet" style={{color:"black" }}>Wallet</Label>
-          <Input id="wallet" value={wallet}
+          <Input id="wallet" value={walletAddress}
         onChange={(e) => setWallet(e.target.value)} placeholder="0x0000000000000000" required />
         </div>
         <div className="space-y-2">
-        <Button className="w-full " style={{marginTop:"10px" ,color:"white",backgroundColor:"#651fff"}}>Login</Button>
+        <Button onClick={handleSubmit} className="w-full " style={{marginTop:"10px" ,color:"white",backgroundColor:"#651fff"}}>Login</Button>
 
         <CardDescription style={{textAlign:"center"}}>Don't Have an account?<a href="/register">register</a></CardDescription>
         </div>

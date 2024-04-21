@@ -268,3 +268,19 @@
 >>>>>>> aa613999094eccf54d91a2575319a90dd60cac58
 {"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T09:27:10.889Z"}
 {"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T09:27:10.893Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T10:48:45.961Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T10:48:45.973Z"}
+{"level":"info","message":"User jijojjj registered successfully","timestamp":"2024-04-21T11:20:47.110Z"}
+{"level":"error","message":"Error during login: secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at module.exports [as sign] (C:\\Users\\anson\\Videos\\JusticeVaults\\backend\\node_modules\\jsonwebtoken\\sign.js:111:20)\n    at loginUser (C:\\Users\\anson\\Videos\\JusticeVaults\\backend\\controllers\\userController.js:78:25)","timestamp":"2024-04-21T11:22:25.010Z"}
+{"level":"error","message":"Error during login: secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at module.exports [as sign] (C:\\Users\\anson\\Videos\\JusticeVaults\\backend\\node_modules\\jsonwebtoken\\sign.js:111:20)\n    at loginUser (C:\\Users\\anson\\Videos\\JusticeVaults\\backend\\controllers\\userController.js:78:25)","timestamp":"2024-04-21T11:23:30.778Z"}
+{"level":"error","message":"Error during login: secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at module.exports [as sign] (C:\\Users\\anson\\Videos\\JusticeVaults\\backend\\node_modules\\jsonwebtoken\\sign.js:111:20)\n    at loginUser (C:\\Users\\anson\\Videos\\JusticeVaults\\backend\\controllers\\userController.js:78:25)","timestamp":"2024-04-21T11:24:39.604Z"}
+{"level":"error","message":"Error during login: secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at module.exports [as sign] (C:\\Users\\anson\\Videos\\JusticeVaults\\backend\\node_modules\\jsonwebtoken\\sign.js:111:20)\n    at loginUser (C:\\Users\\anson\\Videos\\JusticeVaults\\backend\\controllers\\userController.js:78:25)","timestamp":"2024-04-21T11:26:09.872Z"}
+{"level":"info","message":"User jijog registered successfully","timestamp":"2024-04-21T11:28:29.594Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:30:20.906Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:30:20.945Z"}
+{"level":"info","message":"User jijog registered successfully","timestamp":"2024-04-21T11:30:31.768Z"}
+{"level":"error","message":"Error during login: secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at module.exports [as sign] (C:\\Users\\anson\\Videos\\JusticeVaults\\backend\\node_modules\\jsonwebtoken\\sign.js:111:20)\n    at loginUser (C:\\Users\\anson\\Videos\\JusticeVaults\\backend\\controllers\\userController.js:78:25)","timestamp":"2024-04-21T11:31:41.533Z"}
+{"level":"error","message":"Error during login: secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at module.exports [as sign] (C:\\Users\\anson\\Videos\\JusticeVaults\\backend\\node_modules\\jsonwebtoken\\sign.js:111:20)\n    at loginUser (C:\\Users\\anson\\Videos\\JusticeVaults\\backend\\controllers\\userController.js:78:25)","timestamp":"2024-04-21T11:38:26.807Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:39:06.620Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:39:06.643Z"}
+{"level":"info","message":"Login successful for user jijog","timestamp":"2024-04-21T11:39:55.320Z"}
