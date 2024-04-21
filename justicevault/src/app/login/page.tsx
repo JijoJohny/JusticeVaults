@@ -1,16 +1,34 @@
-
-
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/o395GAbQKsN
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
+"use client"
 import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { useState } from "react"
+import axios from "axios"
+
 
 export default function login() {
+  const [username, setUsername] = useState('');
+  const [wallet, setWallet] = useState('');
+  const [error, setError] = useState('');
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('/api/login', {
+        username, wallet
+      });
+      // Assuming your backend returns a token upon successful login
+      const token = response.data.token;
+      localStorage.setItem('token', token);
+      // Retrieve the token from local storage
+     // const storedToken = localStorage.getItem('token');
+      // You can store the token in local storage or a cookie for future requests
+    } catch (error) {
+      console.error('Login failed:', error);
+      setError('Login failed. Please try again later.');
+    }
+  };
+
   return (
     <div className="loginpg">
      <div className="loginborder"> 
@@ -19,21 +37,26 @@ export default function login() {
         <CardTitle className="text-2xl font-bold black "style={{textAlign:"center"}}>LOGIN</CardTitle>
         <CardDescription>Enter your username and wallet address below to login to your account</CardDescription>
       </CardHeader>
+      <form style={{height:"fit-content"}} onSubmit={handleSubmit}>
       <CardContent>
         <div className="space-y-2 ">
           <Label htmlFor="username" style={{color:"black" }}>Username</Label>
-          <Input id="username" placeholder="john_doe" required />
+          <Input id="username" value={username}
+        onChange={(e) => setUsername(e.target.value)} placeholder="john_doe" required />
         </div>
         <div className="space-y-2">
           <Label htmlFor="wallet" style={{color:"black" }}>Wallet</Label>
-          <Input id="wallet" placeholder="0x0000000000000000" required />
+          <Input id="wallet" value={wallet}
+        onChange={(e) => setWallet(e.target.value)} placeholder="0x0000000000000000" required />
         </div>
         <div className="space-y-2">
         <Button className="w-full " style={{marginTop:"10px" ,color:"white",backgroundColor:"#651fff"}}>Login</Button>
 
         <CardDescription style={{textAlign:"center"}}>Don't Have an account?<a href="/register">register</a></CardDescription>
         </div>
+        {error && <p>{error}</p>}
       </CardContent>
+      </form>
     </Card>
     </div>
     </div>
