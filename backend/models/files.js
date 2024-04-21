@@ -1,8 +1,11 @@
-// models/File.js
-
 const mongoose = require('mongoose');
 
 const fileSchema = new mongoose.Schema({
+  fileId: {
+    type:String,
+    required:true,
+    unique :true
+  },
   username: {
     type: String,
     required: true
@@ -10,6 +13,9 @@ const fileSchema = new mongoose.Schema({
   fileName: {
     type: String,
     required: true
+  },
+  description:{
+    type: String,
   },
   fileUrl: {
     type: String,

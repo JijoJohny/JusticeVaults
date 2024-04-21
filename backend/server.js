@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoutes');
-const uploadRoutes = require('./routes/uploadRoutes')
+const fileRoutes = require('./routes/fileRoutes')
 const caseRoutes = require('./routes/caseRoutes')
 const helmet = require('helmet');
 const logger = require('./middlewares/logger');
@@ -60,7 +60,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/auth', authRoutes);
-app.use('/file',uploadRoutes)
+app.use('/file',fileRoutes)
 app.use('/case',caseRoutes)
 
 app.use((err, req, res, next) => {

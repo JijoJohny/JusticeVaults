@@ -5,7 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
     "start": "nodemon server.js"
+=======
+    "start": "nodemon server.js"            
+>>>>>>> aa613999094eccf54d91a2575319a90dd60cac58
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +17,7 @@
     "aws-sdk": "^2.1603.0",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
+    "crypto": "^1.0.1",
     "dotenv": "^16.4.5",
     "email-validator": "^2.0.4",
     "express": "^4.19.2",
