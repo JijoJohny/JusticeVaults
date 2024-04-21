@@ -268,6 +268,7 @@
 >>>>>>> aa613999094eccf54d91a2575319a90dd60cac58
 {"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T09:27:10.889Z"}
 {"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T09:27:10.893Z"}
+<<<<<<< HEAD
 {"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T10:48:45.961Z"}
 {"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T10:48:45.973Z"}
 {"level":"info","message":"User jijojjj registered successfully","timestamp":"2024-04-21T11:20:47.110Z"}
@@ -284,3 +285,60 @@
 {"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:39:06.620Z"}
 {"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:39:06.643Z"}
 {"level":"info","message":"Login successful for user jijog","timestamp":"2024-04-21T11:39:55.320Z"}
+=======
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T09:32:41.864Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T09:32:41.871Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T10:13:29.416Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T10:13:29.425Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T10:40:23.216Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T10:40:23.225Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T10:46:25.869Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T10:46:25.873Z"}
+{"level":"info","message":"User anj registered successfully","timestamp":"2024-04-21T10:46:41.554Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T10:51:47.422Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T10:51:47.430Z"}
+{"code":11000,"errorResponse":{"code":11000,"errmsg":"E11000 duplicate key error collection: test.users index: email_1 dup key: { email: \"aaa@gmail.com\" }","index":0,"keyPattern":{"email":1},"keyValue":{"email":"aaa@gmail.com"}},"index":0,"keyPattern":{"email":1},"keyValue":{"email":"aaa@gmail.com"},"level":"error","message":"Error registering user: E11000 duplicate key error collection: test.users index: email_1 dup key: { email: \"aaa@gmail.com\" }","stack":"MongoServerError: E11000 duplicate key error collection: test.users index: email_1 dup key: { email: \"aaa@gmail.com\" }\n    at InsertOneOperation.execute (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\mongodb\\lib\\operations\\insert.js:51:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async executeOperation (C:\\Users\\Anjana Kj\\PycharmProjects\\JusticeVaults\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:126:16)","timestamp":"2024-04-21T10:53:52.435Z"}
+{"level":"info","message":"User abc registered successfully","timestamp":"2024-04-21T10:55:26.393Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:00:21.476Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:00:21.483Z"}
+{"level":"info","message":"User anj registered successfully","timestamp":"2024-04-21T11:00:35.747Z"}
+{"level":"info","message":"User jijo registered successfully","timestamp":"2024-04-21T11:07:08.679Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:11:34.460Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:11:34.471Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:11:38.585Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:11:38.597Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:11:41.196Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:11:41.206Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:11:52.626Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:11:52.631Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:12:26.565Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:12:26.573Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:12:32.625Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:12:32.635Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:12:56.226Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:12:56.232Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:13:02.127Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:13:02.135Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:13:04.346Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:13:04.358Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:13:12.169Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:13:12.176Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:13:14.113Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:13:14.118Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:13:18.303Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:13:18.313Z"}
+{"level":"info","message":"User anjana registered successfully","timestamp":"2024-04-21T11:16:35.404Z"}
+{"level":"info","message":"User anjanammm registered successfully","timestamp":"2024-04-21T11:16:49.853Z"}
+{"level":"info","message":"User anjanammmmm registered successfully","timestamp":"2024-04-21T11:17:11.334Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:17:41.733Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:17:41.741Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:18:00.592Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:18:00.602Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:18:05.975Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:18:05.987Z"}
+{"level":"info","message":"User anjanakj registered successfully","timestamp":"2024-04-21T11:19:20.800Z"}
+{"level":"info","message":"User anjkk registered successfully","timestamp":"2024-04-21T11:22:02.363Z"}
+{"level":"info","message":"User anjpqpq registered successfully","timestamp":"2024-04-21T11:23:55.086Z"}
+{"level":"info","message":"User classicpolo registered successfully","timestamp":"2024-04-21T11:32:24.168Z"}
+{"level":"info","message":"User classicpolokk registered successfully","timestamp":"2024-04-21T11:38:37.035Z"}
+>>>>>>> 936ba2ace7dab75a617dae313051413c18a4d471

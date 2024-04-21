@@ -7,26 +7,28 @@ const caseRoutes = require('./routes/caseRoutes')
 const helmet = require('helmet');
 const logger = require('./middlewares/logger');
 const multer = require('multer');
+const cors = require('cors');
 
 const app = express();
-app.use(helmet());
-
-app.use(helmet.contentSecurityPolicy({
-  directives: {
-      defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "https://trusted.cdn.com"],
-      objectSrc: ["'none'"],
-      upgradeInsecureRequests: [],
-  }
-}));
-
-
-app.use((req, res, next) => {
-  res.setHeader('X-Frame-Options', 'DENY'); // Prevent clickjacking.
-  res.setHeader('X-XSS-Protection', '1; mode=block'); // Enable XSS filtering (in case browsers ignore Content-Security-Policy header)
-  res.setHeader('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload'); // Enforce HTTPS
-  next();
-});
+app.use(cors());
+//app.use(helmet());
+//
+//app.use(helmet.contentSecurityPolicy({
+//  directives: {
+//      defaultSrc: ["'self'"],
+//      scriptSrc: ["'self'", "https://trusted.cdn.com"],
+//      objectSrc: ["'none'"],
+//      upgradeInsecureRequests: [],
+//  }
+//}));
+//
+//
+//app.use((req, res, next) => {
+//  res.setHeader('X-Frame-Options', 'DENY'); // Prevent clickjacking.
+//  res.setHeader('X-XSS-Protection', '1; mode=block'); // Enable XSS filtering (in case browsers ignore Content-Security-Policy header)
+//  res.setHeader('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload'); // Enforce HTTPS
+//  next();
+//});
 
 
 // app.use((req, res, next) => {
