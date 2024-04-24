@@ -18,11 +18,6 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-<<<<<<< HEAD
-      const response = await axios.post('/auth/register', {
-        username, walletAddress,email,positionInCourt
-      });
-=======
       const response = await axios.post('http://127.0.0.1:3000/auth/register', {
         username,
         walletAddress,
@@ -33,15 +28,19 @@ export default function Register() {
       // const token = response.data.token;
       // localStorage.setItem('token', token);
       // Redirect user to another page or do something else after successful registration
->>>>>>> 936ba2ace7dab75a617dae313051413c18a4d471
-    } catch (error) {
-      console.error('Registration failed:', error);
-      if (error.response && error.response.data && error.response.data.error) {
-        setError(error.response.data.error);
-      } else {
-        setError('Registration failed. Please try again later.');
-      }
-    }
+    }catch (error) {
+      console.error('Login failed:', error);
+      setError('Login failed. Please try again later.');
+    } 
+    
+    // catch (error) {
+    //   console.error('Registration failed:', error);
+    //   if (error.response && error.response.data && error.response.data.error) {
+    //     setError(error.response.data.error);
+    //   } else {
+    //     setError('Registration failed. Please try again later.');
+    //   }
+    // }
   };
 
   if (registered) {
@@ -50,47 +49,6 @@ export default function Register() {
 
   return (
     <div className="loginpg">
-<<<<<<< HEAD
-     <div className="loginborder"> 
-     
-    <Card className="mx-auto max-w-sm">
-      <CardHeader className="space-y-1">
-        <CardTitle className="text-2xl font-bold black">Register</CardTitle>
-        <CardDescription>Fill in your details to create a new account </CardDescription>
-      </CardHeader>
-      <form style={{height:"fit-content"}} onSubmit={handleSubmit}>
-      <CardContent>
-        <div className="space-y-2">
-          
-          <Label htmlFor="username" style={{color:"black" }}>Username</Label>
-          <Input id="username" value={username}
-        onChange={(e) => setUsername(e.target.value)}
-         style={{marginBottom:"20px" }} placeholder="john_doe" required />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="wallet" style={{color:"black" }}>Wallet</Label>
-          <Input id="wallet" value={walletAddress}
-        onChange={(e) => setWallet(e.target.value)} style={{marginBottom:"20px" }} placeholder="0x0000000000000000" required />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="emailid" style={{color:"black" }}>Email</Label>
-          <Input id="emailid" value={email}
-        onChange={(e) => setEmail(e.target.value)} placeholder="example@example.com" style={{color:"black",marginBottom:"20px" }} required type="email" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="position" className="black">Position in Court</Label>
-          <Input id="position" value={positionInCourt}
-        onChange={(e) => setPositionInCourt(e.target.value)}  style={{marginBottom:"20px",color:"black" }} placeholder="Judge" required />
-        </div>
-        <Button onClick={handleSubmit}  className="w-full" style={{marginBottom:"20px",marginTop:"20px" ,color:"white",backgroundColor:"#651fff"}}>Register</Button>
-        
-        <CardDescription style={{textAlign:"center"}}>Already Have an account?<a href="/login">Login</a></CardDescription>
-        {error && <p>{error}</p>}
-      </CardContent>
-      </form>
-
-    </Card>
-=======
       <div className="loginborder">
         <Card className="mx-auto max-w-sm">
           <CardHeader className="space-y-1">
@@ -122,7 +80,6 @@ export default function Register() {
           </form>
         </Card>
       </div>
->>>>>>> 936ba2ace7dab75a617dae313051413c18a4d471
     </div>
   );
 }
