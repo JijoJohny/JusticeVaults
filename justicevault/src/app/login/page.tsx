@@ -3,14 +3,17 @@ import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/com
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { redirect } from 'next/navigation'
 import { useState } from "react"
 import axios from "axios"
 
 
 export default function login() {
   const [username, setUsername] = useState('');
-  const [walletAddress, setWallet] = useState('');
+  const [wallet, setWallet] = useState('');
   const [error, setError] = useState('');
+  const [login, setLogin] = useState(false);
+
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     try {
@@ -21,18 +24,27 @@ export default function login() {
       const token = response.data.token;
       console.log(token);
       localStorage.setItem('token', token);
+      setLogin(true);
       // Retrieve the token from local storage
      // const storedToken = localStorage.getItem('token');
       // You can store the token in local storage or a cookie for future requests
     } catch (error) {
-      console.error('Login failed:', error);
-      setError('Login failed. Please try again later.');
+      console.error('Registration failed:', error);
+      if (error.response && error.response.data && error.response.data.error) {
+        setError(error.response.data.error);
+      } else {
+        setError('Registration failed. Please try again later.');
+      }
     }
   };
 
+  if(login){
+    redirect("/success")
+  }
+
   return (
     <div className="loginpg">
-     <div className="loginborder"> 
+     <div className="loginborder">
     <Card className="mx-auto max-w-sm ">
       <CardHeader className="space-y-1 ">
         <CardTitle className="text-2xl font-bold black "style={{textAlign:"center"}}>LOGIN</CardTitle>
@@ -47,15 +59,15 @@ export default function login() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="wallet" style={{color:"black" }}>Wallet</Label>
-          <Input id="wallet" value={walletAddress}
+          <Input id="wallet" value={wallet}
         onChange={(e) => setWallet(e.target.value)} placeholder="0x0000000000000000" required />
         </div>
         <div className="space-y-2">
-        <Button onClick={handleSubmit} className="w-full " style={{marginTop:"10px" ,color:"white",backgroundColor:"#651fff"}}>Login</Button>
+        <Button className="w-full " style={{marginTop:"10px" ,color:"white",backgroundColor:"#651fff"}}>Login</Button>
 
         <CardDescription style={{textAlign:"center"}}>Don't Have an account?<a href="/register">register</a></CardDescription>
         </div>
-        {error && <p>{error}</p>}
+        {/* {error && <p>{error}</p>} */}
       </CardContent>
       </form>
     </Card>
