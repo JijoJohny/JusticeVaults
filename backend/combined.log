@@ -342,3 +342,9 @@
 {"level":"info","message":"User classicpolo registered successfully","timestamp":"2024-04-21T11:32:24.168Z"}
 {"level":"info","message":"User classicpolokk registered successfully","timestamp":"2024-04-21T11:38:37.035Z"}
 >>>>>>> 936ba2ace7dab75a617dae313051413c18a4d471
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-04-21T11:59:52.115Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-04-21T11:59:52.122Z"}
+{"level":"info","message":"User john registered successfully","timestamp":"2024-04-21T11:59:57.255Z"}
+{"level":"info","message":"Login successful for user john","timestamp":"2024-04-21T12:03:32.559Z"}
+{"level":"info","message":"Login successful for user john","timestamp":"2024-04-21T12:03:34.855Z"}
+{"level":"info","message":"Login successful for user john","timestamp":"2024-04-21T12:06:21.692Z"}

@@ -10,7 +10,7 @@ import axios from "axios"
 
 export default function login() {
   const [username, setUsername] = useState('');
-  const [wallet, setWallet] = useState('');
+  const [walletAddress, setWallet] = useState('');
   const [error, setError] = useState('');
   const [login, setLogin] = useState(false);
 
@@ -59,7 +59,7 @@ export default function login() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="wallet" style={{color:"black" }}>Wallet</Label>
-          <Input id="wallet" value={wallet}
+          <Input id="wallet" value={walletAddress}
         onChange={(e) => setWallet(e.target.value)} placeholder="0x0000000000000000" required />
         </div>
         <div className="space-y-2">
