@@ -28,14 +28,19 @@ export default function Register() {
       // const token = response.data.token;
       // localStorage.setItem('token', token);
       // Redirect user to another page or do something else after successful registration
-    } catch (error) {
-      console.error('Registration failed:', error);
-      if (error.response && error.response.data && error.response.data.error) {
-        setError(error.response.data.error);
-      } else {
-        setError('Registration failed. Please try again later.');
-      }
-    }
+    }catch (error) {
+      console.error('Login failed:', error);
+      setError('Login failed. Please try again later.');
+    } 
+    
+    // catch (error) {
+    //   console.error('Registration failed:', error);
+    //   if (error.response && error.response.data && error.response.data.error) {
+    //     setError(error.response.data.error);
+    //   } else {
+    //     setError('Registration failed. Please try again later.');
+    //   }
+    // }
   };
 
   if (registered) {

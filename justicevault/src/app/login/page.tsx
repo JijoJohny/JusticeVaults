@@ -10,7 +10,7 @@ import axios from "axios"
 
 export default function login() {
   const [username, setUsername] = useState('');
-  const [walletAddress, setWalletAddress] = useState('');
+  const [walletAddress, setWallet] = useState('');
   const [error, setError] = useState('');
   const [login, setLogin] = useState(false);
 
@@ -22,6 +22,7 @@ export default function login() {
       });
       // Assuming your backend returns a token upon successful login
       const token = response.data.token;
+      console.log(token);
       localStorage.setItem('token', token);
       setLogin(true);
       // Retrieve the token from local storage
@@ -57,13 +58,13 @@ export default function login() {
         onChange={(e) => setUsername(e.target.value)} placeholder="john_doe" required />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="walletAddress" style={{color:"black" }}>Wallet</Label>
-          <Input id="walletAddress" value={walletAddress}
-        onChange={(e) => setWalletAddress(e.target.value)} placeholder="0x0000000000000000" required />
+          <Label htmlFor="wallet" style={{color:"black" }}>Wallet</Label>
+          <Input id="wallet" value={walletAddress}
+        onChange={(e) => setWallet(e.target.value)} placeholder="0x0000000000000000" required />
         </div>
         <div className="space-y-2">
-        <Button type="submit" className="w-full " style={{marginTop:"10px" ,color:"white",backgroundColor:"#651fff"}}>Login</Button>
-        {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
+        <Button className="w-full " style={{marginTop:"10px" ,color:"white",backgroundColor:"#651fff"}}>Login</Button>
+
         <CardDescription style={{textAlign:"center"}}>Don't Have an account?<a href="/register">register</a></CardDescription>
         </div>
         {/* {error && <p>{error}</p>} */}
