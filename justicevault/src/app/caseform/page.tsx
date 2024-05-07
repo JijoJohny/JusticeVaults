@@ -9,21 +9,19 @@ import { useState } from "react"
 import axios from "axios"
 
 export default function Upload() {
-  const [fileid, setFileId] = useState('');
-  const [filename, setFilename] = useState('');
-  const [fileDescription, setFileDescription] = useState('');
-  const [file, setFile] = useState(undefined); // Change initial state to undefined
+  const [casename, setCasename] = useState('');
+  const [caseDescription, setCaseDescription] = useState('');
+  
   const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const formData = new FormData();
-      formData.append('fileid', fileid);
-      formData.append('filename', filename);
-      formData.append('fileDescription', fileDescription);
-      if (file) {
-        formData.append('file', file);
+      formData.append('casename', casename);
+      formData.append('caseDescription', caseDescription);
+      if (case) {
+        formData.append('case', case);
       }
 
       const response = await axios.post('/api/upload', formData, {
@@ -38,13 +36,13 @@ export default function Upload() {
     }
   };
 
-  const handleFileChange = (e) => {
-    const selectedFile = e.target.files[0];
-    if (selectedFile) {
-      setFile(selectedFile);
+  const handleCaseChange = (e) => {
+    const selectedCase = e.target.cases[0];
+    if (selectedCase) {
+      setCase(selectedCase);
     } else {
-      console.error('No file selected');
-      setError('Please select a file');
+      console.error('No case selected');
+      setError('Please select a case');
     }
   };
 
@@ -55,25 +53,25 @@ export default function Upload() {
       <div className="mx-auto my-10 max-w-md space-y-6 px-4 py-12 border rounded-lg shadow-lg">
 
         <div className="space-y-2 text-center">
-          <h1 className="text-3xl font-bold">Upload a File</h1>
-          <p className="text-gray-500 dark:text-gray-400">Add a new file to your account.</p>
+          <h1 className="text-3xl font-bold">Upload a Case</h1>
+          <p className="text-gray-500 dark:text-gray-400">Add a new case to your account.</p>
         </div>
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div className="space-y-2">
-            <Label htmlFor="file-id">File ID</Label>
-            <Input id="file-id" value={fileid} onChange={(e) => setFileId(e.target.value)} placeholder="Enter File ID" required />
+            <Label htmlFor="case-id">Case ID</Label>
+            <Input id="case-id" placeholder="Enter Case ID" required />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="file-name">File Name</Label>
-            <Input id="file-name" value={filename} onChange={(e) => setFilename(e.target.value)} placeholder="Enter a file name" required />
+            <Label htmlFor="case-name">Case Name</Label>
+            <Input id="case-name" value={casename} onChange={(e) => setCasename(e.target.value)} placeholder="Enter a case name" required />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="file-description">File Description</Label>
-            <Textarea className="min-h-[100px]" id="file-description" value={fileDescription} onChange={(e) => setFileDescription(e.target.value)} placeholder="Describe your file" required />
+            <Label htmlFor="case-description">Case Description</Label>
+            <Textarea className="min-h-[100px]" id="case-description" value={caseDescription} onChange={(e) => setCaseDescription(e.target.value)} placeholder="Describe your case" required />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="file">File</Label>
-            <Input id="file" onChange={handleFileChange} required type="file" />
+            <Label htmlFor="case">Case</Label>
+            <Input id="case" onChange={handleCaseChange} required type="case" />
           </div>
           <Button className="w-full" style={{backgroundColor: "#651fff", color: "white"}} type="submit">
             Upload
