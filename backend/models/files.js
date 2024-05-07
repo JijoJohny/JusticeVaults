@@ -1,3 +1,5 @@
+// models/File.js
+
 const mongoose = require('mongoose');
 
 const fileSchema = new mongoose.Schema({
@@ -27,7 +29,7 @@ const fileSchema = new mongoose.Schema({
     required: true
   },
   caseId: {
-    type: String, 
+    type: String,
     required: true
   },
   timestamp: {

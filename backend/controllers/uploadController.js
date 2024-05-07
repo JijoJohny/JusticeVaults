@@ -37,8 +37,8 @@ async function uploadFileToStorj(req, res) {
         const user = req.user;
         const file = req.file;
         const id = req.body.id
-        const description = req.body.description; 
-        const fileName = req.body.fileName; 
+        const description = req.body.description;
+        const fileName = req.body.fileName;
         const caseId = req.body.caseId;
 
         const fileBuffer = file.buffer;

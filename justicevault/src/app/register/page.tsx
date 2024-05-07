@@ -1,11 +1,11 @@
-"use client"; 
+"use client";
 import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { redirect } from 'next/navigation'
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import axios from "axios"; 
+import axios from "axios";
 
 export default function Register() {
   const [username, setUsername] = useState('');
@@ -31,8 +31,8 @@ export default function Register() {
     }catch (error) {
       console.error('Login failed:', error);
       setError('Login failed. Please try again later.');
-    } 
-    
+    }
+
     // catch (error) {
     //   console.error('Registration failed:', error);
     //   if (error.response && error.response.data && error.response.data.error) {

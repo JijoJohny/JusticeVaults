@@ -14,12 +14,32 @@
   font-family: "Sofia-Pro-Bold";
   src: url("/fonts/SofiaProBold.ttf");
 }
+.addbox{
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+}
 input {
   height: 62px;
   flex-basis: 50%;
   margin: 0 40px 0 40px;
   font-size: 22px;
   
+  color: #606060;
+  border: 1px solid #606060;
+  box-shadow: rgb(114, 114, 114) 0px 0px 1px 1px inset;
+  padding-left: 15px;
+}
+.plus{
+
+  font-size: 2rem;
+}
+
+textarea {
+
+  flex-basis: 50%;
+  margin: 0 40px 0 40px;
+  font-size: 22px;
   color: #606060;
   border: 1px solid #606060;
   box-shadow: rgb(114, 114, 114) 0px 0px 1px 1px inset;
@@ -210,6 +230,7 @@ nav div button {
 .search {
   display: flex;
   justify-content: center;
+  border-radius: 5px;
   margin-top: 100px;
   width: 100%;
 }
@@ -217,6 +238,7 @@ nav div button {
 .search input {
   height: 62px;
   flex-basis: 50%;
+  border-radius: 10px;
   margin: 0 40px 0 40px;
   font-size: 22px;
   background-color: #d9d9d9;
@@ -317,4 +339,67 @@ form .addbox .addbox{
     font-size: 18px;
     width: 90%;
   }
+}
+
+.buttona {
+  --main-focus: #2d8cf0;
+  --font-color: #323232;
+  --bg-color-sub: #dedede;
+  --bg-color: #eee;
+  --main-color: #323232;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: row;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.buttona, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.buttona .button__text {
+  transform: translateX(22px);
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+.buttona .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: var(--bg-color-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttona .svg {
+  width: 20px;
+  fill: var(--main-color);
+}
+
+.buttona:hover {
+  background: var(--bg-color);
+}
+
+.buttona:hover .button__text {
+  color: transparent;
+}
+
+.buttona:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.buttona:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px var(--main-color);
 }
