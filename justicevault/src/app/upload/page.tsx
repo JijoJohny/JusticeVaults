@@ -16,7 +16,7 @@ export default function Upload() {
     <Card className="w-full max-w-lg bg-white dark:bg-gray-800">
       <CardHeader>
         <CardTitle className="text-xl dark:text-white">Upload your file</CardTitle>
-        <CardDescription className="dark:text-gray-400">Any file up to 25MB</CardDescription>
+        <CardDescription className="dark:text-gray-400">File size upto 25MB</CardDescription>
       </CardHeader>
       <CardContent className="flex items-start gap-4 pt-4">
         <div className="grid gap-2.5 w-12 h-12 rounded-lg overflow-hidden">
@@ -44,7 +44,7 @@ export default function Upload() {
           </div>
           <div className="flex items-center gap-1.5 text-xs dark:text-gray-400">
             <CircleIcon className="w-4 h-4 flex-shrink-0" />
-            <span>JPEG, PNG, GIF. Max file size 10MB.</span>
+            <span>JPEG, PNG, GIF. File size upto 10MB.</span>
           </div>
         </div>
       </CardContent>

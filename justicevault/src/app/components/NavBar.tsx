@@ -23,7 +23,7 @@ export default function NavBar(props: { btnval: any; }) {
             <a style={astyle} href="/"><p>App</p></a>
             <a style={astyle} href="/">  <p>English</p></a>
                 {/* <button>Sign In</button> */}
-                <a href={buttonValue == 'Log Out' ?"/":"/success"}>
+                <a href={buttonValue == 'Log Out' ?"/":"/login"}>
                 <Button variant='outline-dark' >{buttonValue}</Button></a>
                 {/* <Button variant='outline-dark'>Sign In</Button> */}
             </div>
