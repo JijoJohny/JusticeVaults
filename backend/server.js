@@ -11,24 +11,24 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors());
-// app.use(helmet());
+app.use(helmet());
 
-// app.use(helmet.contentSecurityPolicy({
-//  directives: {
-//      defaultSrc: ["'self'"],
-//      scriptSrc: ["'self'", "https://trusted.cdn.com"],
-//      objectSrc: ["'none'"],
-//      upgradeInsecureRequests: [],
-//  }
-// }));
+app.use(helmet.contentSecurityPolicy({
+ directives: {
+     defaultSrc: ["'self'"],
+     scriptSrc: ["'self'", "https://trusted.cdn.com"],
+     objectSrc: ["'none'"],
+     upgradeInsecureRequests: [],
+ }
+}));
 
 
-// app.use((req, res, next) => {
-//  res.setHeader('X-Frame-Options', 'DENY'); // Prevent clickjacking.
-//  res.setHeader('X-XSS-Protection', '1; mode=block'); // Enable XSS filtering (in case browsers ignore Content-Security-Policy header)
-//  res.setHeader('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload'); // Enforce HTTPS
-//  next();
-// });
+app.use((req, res, next) => {
+ res.setHeader('X-Frame-Options', 'DENY'); // Prevent clickjacking.
+ res.setHeader('X-XSS-Protection', '1; mode=block'); // Enable XSS filtering (in case browsers ignore Content-Security-Policy header)
+ res.setHeader('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload'); // Enforce HTTPS
+ next();
+});
 
 
 // app.use((req, res, next) => {
@@ -47,7 +47,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/court', {
 .then(() => {
   logger.info('Connected to MongoDB');
 
-  const PORT = process.env.PORT || 3000;
+  const PORT = process.env.PORT || 3001;
   app.listen(PORT, () => {
     logger.info(`Server is running on port ${PORT}`);
   });
