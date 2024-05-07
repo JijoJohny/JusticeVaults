@@ -359,3 +359,35 @@
 {"level":"info","message":"Login successful for user john","timestamp":"2024-04-21T12:03:34.855Z"}
 {"level":"info","message":"Login successful for user john","timestamp":"2024-04-21T12:06:21.692Z"}
 >>>>>>> 33a5cee3d944782af13a03bd52dff69f9efe568d
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-05-07T17:23:06.901Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2024-05-07T17:23:06.908Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-05-07T17:23:41.522Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-05-07T17:24:04.345Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2024-05-07T17:24:04.355Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-05-07T17:25:15.475Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2024-05-07T17:25:15.501Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-05-07T18:28:29.196Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-05-07T18:29:08.924Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2024-05-07T18:29:08.932Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-05-07T18:39:10.869Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-05-07T18:40:46.376Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2024-05-07T18:40:46.386Z"}
+{"level":"info","message":"Login successful for user jijoj","timestamp":"2024-05-07T18:47:31.561Z"}
+{"level":"info","message":"Login successful for user jijoj","timestamp":"2024-05-07T18:55:32.088Z"}
+{"level":"info","message":"Login successful for user jijoj","timestamp":"2024-05-07T19:00:32.109Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-05-07T19:05:44.106Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2024-05-07T19:05:44.119Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-05-07T19:05:46.676Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2024-05-07T19:05:46.688Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-05-07T19:05:48.517Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2024-05-07T19:05:48.534Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-05-07T19:06:35.675Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2024-05-07T19:06:35.682Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-05-07T19:07:59.029Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2024-05-07T19:07:59.040Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-05-07T19:15:10.828Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2024-05-07T19:15:10.834Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-05-07T19:20:23.239Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2024-05-07T19:20:23.249Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-05-07T19:20:45.490Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2024-05-07T19:20:45.499Z"}
