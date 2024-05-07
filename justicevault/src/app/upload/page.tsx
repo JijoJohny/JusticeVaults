@@ -1,106 +1,98 @@
-'use client';
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
-import { CardTitle, CardDescription, CardHeader, CardContent, CardFooter, Card } from "@/components/ui/card"
+"use client";
+import { Label } from "@/components/ui/label"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
+import NavBar from "../components/NavBar"
+import Footer from "../components/Footer"
+import { useState } from "react"
+import axios from "axios"
 
 export default function Upload() {
+  
+  const [filename, setFilename] = useState('');
+  const [fileDescription, setFileDescription] = useState('');
+  const [file, setFile] = useState(undefined); // Change initial state to undefined
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    try {
+      // Retrieve the token from local storage
+      const token = localStorage.getItem('token');
+
+      const formData = new FormData();
+      formData.append('filename', filename);
+      formData.append('fileDescription', fileDescription);
+      // Append the file to the form data if it exists
+      if (file) {
+        formData.append('file', file);
+      }
+      // Append the token to the form data
+      if (token) {
+        formData.append('token', token);
+      }
+
+      const response = await axios.post('/api/upload', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+     
+    
+    } catch (error) {
+      console.error('Upload failed:', error);
+      setError('Upload failed. Please try again later.');
+    }
+    const handleFileChange = (e: { target: { files: any[]; }; }) => {
+      const selectedFile = e.target.files[0];
+      // Check if a file was selected
+      if (selectedFile) {
+        setFile(selectedFile);
+      } else {
+        // Handle case where no file was selected
+        console.error('No file selected');
+        setError('Please select a file');
+        {/* File input */}
+  };
   return (
     <>
-      <div className="root">
-      <NavBar btnval="Log Out"/>
-
-
-
-    <Card className="w-full max-w-lg bg-white dark:bg-gray-800">
-      <CardHeader>
-        <CardTitle className="text-xl dark:text-white">Upload your file</CardTitle>
-        <CardDescription className="dark:text-gray-400">File size upto 25MB</CardDescription>
-      </CardHeader>
-      <CardContent className="flex items-start gap-4 pt-4">
-        <div className="grid gap-2.5 w-12 h-12 rounded-lg overflow-hidden">
-          <img
-            alt="Avatar"
-            className="rounded w-full h-full object-cover"
-            height={48}
-            src="/placeholder.svg"
-            style={{
-              aspectRatio: "48/48",
-              objectFit: "cover",
-            }}
-            width={48}
-          />
-        </div>
-        <div className="grid gap-1.5">
-          <div className="flex items-center gap-2">
-            <UploadIcon className="w-6 h-6 text-[#651fff]" />
-            <Button className="bg-[#651fff] text-white" size="sm">
-              Upload new picture
-            </Button>
-            <Button className="bg-[#651fff] text-[#651fff]" size="sm" variant="outline">
-              Remove
-            </Button>
-          </div>
-          <div className="flex items-center gap-1.5 text-xs dark:text-gray-400">
-            <CircleIcon className="w-4 h-4 flex-shrink-0" />
-            <span>JPEG, PNG, GIF. File size upto 10MB.</span>
-          </div>
-        </div>
-      </CardContent>
-      <CardFooter className="flex justify-end">
-        <Button className="bg-[#651fff] text-white">Save</Button>
-      </CardFooter>
-    </Card>
-  
-
-
-
-
-
-       
-       <Footer/>
+    <NavBar btnval='Log Out'/>
+    <div className="mx-auto my-10 max-w-md space-y-6 px-4 py-12 border rounded-lg shadow-lg">
+      <div className="space-y-2 text-center">
+        <h1 className="text-3xl font-bold">Upload a File</h1>
+        <p className="text-gray-500 dark:text-gray-400">Add a new file to your account.</p>
       </div>
+      <form className="space-y-4"  onSubmit={handleSubmit}>
+      <div className="space-y-2">
+          <Label htmlFor="file-name">File ID</Label>
+          <Input id="file-name" placeholder="Enter File ID" required />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="file-name">File Name</Label>
+          <Input id="file-name" value={filename}
+        onChange={(e) => setFilename(e.target.value)} placeholder="Enter a file name" required />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="file-description">File Description</Label>
+          <Textarea className="min-h-[100px]" id="file-description"   value={fileDescription}
+        onChange={(e) => setFileDescription(e.target.value)}
+ placeholder="Describe your file" required />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="file">File</Label>
+          <Input id="file"  onChange={()=>handleFileChange} required type="file" />
+        </div>
+        <Button className="w-full " style={{backgroundColor: "#651fff",color:"white"}} type="submit">
+          Upload
+        </Button>
+        
+        {error && <p>{error}</p>}
+      </form>
+    </div>
+    <Footer/>
     </>
-  );
-  function CircleIcon(props :any) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <circle cx="12" cy="12" r="10" />
-      </svg>
-    )
-  }
-  
-  
-  function UploadIcon(props: any) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-        <polyline points="17 8 12 3 7 8" />
-        <line x1="12" x2="12" y1="3" y2="15" />
-      </svg>
-    )
+  )
 }
+  }
 }

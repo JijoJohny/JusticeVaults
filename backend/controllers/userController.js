@@ -16,18 +16,13 @@ async function registerUser(req, res) {
         return res.status(400).json({ error: 'Username is required' });
       }
       if (!positionInCourt) {
-        return res.status(400).json({ error: 'Positonincourt is  required' });
+        return res.status(400).json({ error: 'Position in court is  required' });
       }
       if (!email) {
         return res.status(400).json({ error: 'Email is required' });
       }
       if (!walletAddress) {
-        return res.status(400).json({ error: "Walletaddress is required" });
-      }
-
-      const existingUser = await User.findOne({ username });
-      if (existingUser) {
-        return res.status(409).json({ error: 'Username already exists' });
+        return res.status(400).json({ error: "Wallet address is required" });
       }
 
       if (!emailvalidator.validate(email)) {
@@ -39,6 +34,20 @@ async function registerUser(req, res) {
       }
 
       const hashedWalletAddress = await bcrypt.hash(walletAddress, 10);
+
+      const existingUser = await User.findOne({ username });
+      if (existingUser) {
+        return res.status(409).json({ error: 'Username already exists' });
+      }
+      const existingEmail = await User.findOne({ email });
+      if (existingEmail) {
+        return res.status(409).json({ error: 'Email is already registered' });
+      }
+
+      const existingWallet = await User.findOne({ hashedWalletAddress });
+      if (existingWallet) {
+        return res.status(409).json({ error: 'Wallet address is already registered' });
+      }
 
       const user = new User({
         username,
