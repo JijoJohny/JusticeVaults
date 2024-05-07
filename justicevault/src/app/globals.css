@@ -25,6 +25,17 @@ input {
   box-shadow: rgb(114, 114, 114) 0px 0px 1px 1px inset;
   padding-left: 15px;
 }
+
+textarea {
+
+  flex-basis: 50%;
+  margin: 0 40px 0 40px;
+  font-size: 22px;
+  color: #606060;
+  border: 1px solid #606060;
+  box-shadow: rgb(114, 114, 114) 0px 0px 1px 1px inset;
+  padding-left: 15px;
+}
 .loginpg{
   display: flex;
   align-items: center;
