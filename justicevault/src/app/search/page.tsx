@@ -18,11 +18,11 @@ export default function Search() {
             <input type="text" className="inner-shadow caseno" placeholder="Enter Case no" />
              <input type="date" className="date" placeholder="Enter Year"/>
       </div> 
-      <div className="subbox">     
-      
-       <a style={astyle} href="/casedetails" className="submit"><div>Submit</div></a> 
-       
-       
+      <div className="subbox">
+
+       <a style={astyle} href="/casedetails" className="submit"><div>Submit</div></a>
+
+
        </div >
 
 
