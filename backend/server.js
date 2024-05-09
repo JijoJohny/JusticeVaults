@@ -47,7 +47,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/court', {
 .then(() => {
   logger.info('Connected to MongoDB');
 
-  const PORT = process.env.PORT || 3000;
+  const PORT = process.env.PORT || 3001;
   app.listen(PORT, () => {
     logger.info(`Server is running on port ${PORT}`);
   });
