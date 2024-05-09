@@ -4,6 +4,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import DetailCard from '../components/DetailCard';
+import NavBar from '../components/NavBar';
 
 const DetailsPage = () => {
   const [details, setDetails] = useState([]);
@@ -25,15 +26,17 @@ const DetailsPage = () => {
   }, []);
 
   return (
+    <><NavBar btnval='Log Out' />
     <div className="details-container">
-      <h1>Details</h1>
+      <h1>Case Details</h1>
       {error && <p>{error}</p>}
       <div className="card-container">
         {details.map((detail) => (
-          <DetailCard key={detail._id} detail={detail} />
+          <DetailCard key={detail.filename} detail={detail} />
         ))}
       </div>
     </div>
+    <Footer/></>
   );
 };
 

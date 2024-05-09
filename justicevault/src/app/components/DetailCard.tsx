@@ -1,9 +1,10 @@
 // components/DetailCard.js
-const DetailCard = ({ detail }) => {
+const DetailCard = (props:{ detail: any  }) => {
+ 
     return (
       <div className="card">
-        <h2>{detail.filename}</h2>
-        <p>{detail.fileDescription}</p>
+        <h2>{props.detail.filename}</h2>
+        <p>{props.detail.fileDescription}</p>
         {/* Add more details here */}
       </div>
     );
