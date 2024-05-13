@@ -4,9 +4,14 @@ const logger = require('../middlewares/logger');
 async function addCase(req, res) {
     try {
         const { caseId, name, description } = req.body;
-
-        if (!caseId || !name || !description) {
-            return res.status(400).json({ error: 'Please provide caseId, name, and description' });
+        if (!req.body.caseId ) {
+            return res.status(400).json({ error: 'Please provide caseId.' });
+        }
+        if (!name ) {
+            return res.status(400).json({ error: 'Please provide name' });
+        }
+        if ( !description) {
+            return res.status(400).json({ error: 'Please provide description' });
         }
 
         const existingCase = await Case.findOne({ caseId });

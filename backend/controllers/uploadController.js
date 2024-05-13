@@ -1,5 +1,6 @@
 const S3 = require("aws-sdk/clients/s3");
 const File = require("../models/files");
+const Case = require("../models/case");
 const logger = require('../middlewares/logger');
 const crypto = require('crypto');
 require('dotenv').config();
@@ -26,13 +27,26 @@ async function uploadFileToStorj(req, res) {
         if (!req.body.fileName) {
             return res.status(400).json({ error: 'Filename is required' });
         }
+        if (!req.body.caseId) {
+            return res.status(400).json({ error: 'Case ID is required' });
+        }
+        if (!req.body.id) {
+            return res.status(400).json({ error: 'ID is required' });
+        }
 
         const user = req.user;
         const file = req.file;
-        const description = req.body.description; 
-        const fileName = req.body.fileName; 
+        const id = req.body.id
+        const description = req.body.description;
+        const fileName = req.body.fileName;
+        const caseId = req.body.caseId;
 
         const fileBuffer = file.buffer;
+
+        const existingCase = await Case.findOne({ caseId });
+        if (!existingCase) {
+            return res.status(400).json({ error: 'Case with this ID does not exist' });
+        }
 
         const existingFile = await File.findOne({ fileName });
         if (existingFile) {
@@ -57,11 +71,13 @@ async function uploadFileToStorj(req, res) {
         console.log("File uploaded successfully:", uploadResponse.Location);
 
         const fileData = new File({
+            id,
             fileId,
             username: user.username,
             fileName,
             description,
             fileUrl: uploadResponse.Location,
+            caseId,
             timestamp: Date.now()
         });
         await fileData.save();
@@ -70,7 +86,7 @@ async function uploadFileToStorj(req, res) {
 
         return res.status(201).json({ message: 'File uploaded successfully' });
     } catch (error) {
-        logger.error(`Error uploading file: ${error.message} (Username: ${user.username})`);
+        logger.error(`Error uploading file: ${error.message} (Username: ${req.user.username})`);
         console.error("Error uploading file:", error);
         return res.status(500).json({ error: 'Internal server error' });
     }

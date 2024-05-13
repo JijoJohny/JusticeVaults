@@ -17,7 +17,7 @@ export default function login() {
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://127.0.0.1:3000/auth/login', {
+      const response = await axios.post('http://127.0.0.1:3001/auth/login', {
         username, walletAddress
       });
       // Assuming your backend returns a token upon successful login

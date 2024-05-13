@@ -1,10 +1,17 @@
+// models/File.js
+
 const mongoose = require('mongoose');
 
 const fileSchema = new mongoose.Schema({
+  id: {
+    type: String,
+    required: true,
+    unique: true,
+  },
   fileId: {
-    type:String,
-    required:true,
-    unique :true
+    type: String,
+    required: true,
+    unique: true
   },
   username: {
     type: String,
@@ -14,10 +21,14 @@ const fileSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  description:{
+  description: {
     type: String,
   },
   fileUrl: {
+    type: String,
+    required: true
+  },
+  caseId: {
     type: String,
     required: true
   },
