@@ -1,17 +1,80 @@
-'use client';
-import Header from "../components/Header";
+"use client";
+import { Button } from "@/components/ui/button";
 import Footer from "../components/Footer";
-import Features from "../components/Features";
-export default function Success() {
-  return (
-    <>
-      <div className="root">
-        <Header  btnval="Log Out" dival ="Get Case Details"/>
+import NavBar from "../components/NavBar";
+import { useState } from "react"
+import axios from "axios"
 
-        <Features/>
-       
+export default function Search() {
+
+  const [caseID, setCaseId] = useState('');
+  const [error, setError] = useState('');
+  const [login, setLogin] = useState(false);
+  const [registered, setRegistered] = useState(true);
+
+const handleSubmit = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    try {
+//       const formData = new FormData();
+//       formData.append('caseId', caseId);
+//       formData.append('name', name);
+//       formData.append('description', description);
+//       console.log(caseId);
+      const token = localStorage.getItem('token');
+//
+//       for (var pair of formData.entries()) {
+//         console.log(pair[0]+ ', ' + pair[1]);
+//       }
+
+      const response = await axios.post('http://127.0.0.1:3001/case/add', {
+          caseId , name ,description
+      },
+      {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+//           'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      console.log(response.data);
+      setSuccess(true);
+    } catch (error) {
+      console.error('Case add failed:', error);
+      if (error.response && error.response.status === 401 && error.response.data === 'Unauthorized: Invalid token') {
+        // Redirect to the login page if the error is a TokenExpiredError
+        setRegistered(false);
+      } else {
+        setError(error.response?.data?.error || 'Add failed. Please try again later.');
+      }
+    }
+  };
+  
+  const astyle ={
+    textDecoration: 'none',
+    color:'black',
+    maxWidth : 'fit-content'
+}
+    return (
+      <>
+        <div className="root">
+        <NavBar btnval='Log Out'/>
+        <form>
+        <div className="search">
+         
+            <input type="text" className="inner-shadow caseno" placeholder="Enter Case no" />
+             <input type="date" className="date" placeholder="Enter Year"/>
+      </div> 
+      <div className="subbox">
+       <a style={astyle} href="/casedetails" className="submit"><div>Submit</div></a>
+       </div >
+       <a style={astyle} href="/caseform" className="addfile"><Button/>
+        <button className="buttona" type="button">
+  <span className="button__text">Case File</span>
+  <span className="button__icon"><svg className="svg" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
+</button></a>
+       </form>
        <Footer/>
       </div>
-    </>
-  );
-}
+      </>
+    );
+  }
